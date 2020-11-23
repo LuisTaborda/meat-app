@@ -24,7 +24,7 @@
 
             <dl class="col-sm-9 col-xs-12">
               <dt>Categoria</dt>
-              <dd>{{restaurant?.category}}</dd>
+              <dd>{{restaraunt?.category}}</dd>
               <dt>Quem somos</dt>
               <dd>{{restaurant?.about}}</dd>
               <dt>Horários</dt>
@@ -33,10 +33,10 @@
           </div>
           <!-- /.box-body -->
           <div class="box-footer detail-footer">
-          <a class="pull-left detail-active" href="detail-restaurant.html">
+          <a class="pull-left" [routerLink]="['menu']" routerLinkActive="detail-active" >
              Menu
           </a>
-          <a class="pull-right" href="detail-restaurant-reviews.html">
+          <a class="pull-right" [routerLink]="['reviews']" routerLinkActive="detail-active" >
              Avaliações
           </a>
         </div>
@@ -47,7 +47,8 @@
   </div>
 
   <div class="row">
-    <mt-menu></mt-menu>      
+    <router-outlet></router-outlet>
+       
   </div>
 
 </section>
